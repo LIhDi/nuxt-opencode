@@ -5,7 +5,7 @@
         <v-flex xs10 offset-xs1>
           <v-card id="container-secundario">
             <v-toolbar classheight="50px" card prominent color="transparent" tabs>
-              <v-tabs  v-model="currentMenu" color="transparent"  fixed-tabs  slider-color="blue-grey lighten-1">
+              <v-tabs  color="transparent"  fixed-tabs  slider-color="blue-grey lighten-1">
                     <v-tab v-for="item in items" :key="item" :href="'#tab-' + item" >  {{ item }} </v-tab>
               </v-tabs>
             </v-toolbar>
