@@ -1,27 +1,34 @@
 <template>
   <div class="layout">
-      <v-toolbar classheight="50px" card prominent color="transparent" tabs>
-        <v-tabs  color="transparent"  fixed-tabs  slider-color="blue-grey lighten-1">
-          <v-tab v-for="item in items" :key="item" :href="'#tab-' + item" >  {{ item }} </v-tab>
-      </v-tabs>
+      <v-toolbar id="top" extended card prominent color="blue-grey lighten-1" tabs>
+        <template v-slot:extension>
+          <v-tabs dark color="transparent" fixed-tabs  slider-color="white">
+            
+            <v-tab v-for="item in items" :key="item" >  {{ item }} </v-tab>
+          </v-tabs>
+        </template>
+        <v-spacer></v-spacer>
+        <v-btn color="white" icon><v-icon>search</v-icon></v-btn>
+        <v-btn color="white" icon><v-icon>apps</v-icon></v-btn>
+        <v-btn color="white" icon><v-icon>more_vert</v-icon></v-btn>
       </v-toolbar>
     <nuxt class="nuxt-content"/>
     <Footer/>
   </div>
 </template>
 <script>
-  import Footer from '~/components/Sections/Footer'
+import Footer from '~/components/Sections/Footer'
 
-  export default {
-    components: {
-      Footer
-    },
+export default {
+  components: {
+    Footer
+  },
   data () {
     return {
-items: [ 'HOME', 'DEVOPS', 'LINUX', 'TEAM', 'CODE']
+      items: [ 'HOME', 'DEVOPS', 'LINUX', 'TEAM', 'CODE']
     }
   }
-  }
+}
 </script>
 <style lang="scss">
 .layout {
@@ -32,5 +39,13 @@ items: [ 'HOME', 'DEVOPS', 'LINUX', 'TEAM', 'CODE']
 
 .nuxt-content {
   flex-grow: 1;
+}
+.v-tabs__item {
+  color:white;
+  font-size: 15px;
+}
+.v-tabs__item:hover {
+  color:white;
+  font-size: 18px;
 }
 </style>
