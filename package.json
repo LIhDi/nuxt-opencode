@@ -1,23 +1,33 @@
 {
   "name": "opencode",
   "version": "1.0.0",
-  "description": "My supreme Nuxt.js project",
-  "author": "Aline Diogo",
+  "author": "lihdi <alinecsdiogo@gmail.com>",
   "private": true,
-  "scripts": {
-    "dev": "nuxt --hostname 0.0.0.0 --port 1234",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=5.0.0"
   },
   "dependencies": {
-    "cross-env": "^5.2.0",
-    "nuxt": "^2.4.0",
-    "vuetify": "^1.5.5",
-    "vuetify-loader": "^1.2.1"
+    "@nuxtjs/style-resources": "^0.1.2",
+    "normalize.css": "^8.0.1",
+    "nuxt": "^2.7.1",
+    "nuxt-i18n": "^5.8.5",
+    "nuxt-webfontloader": "^1.0.0",
+    "vue-lazyload": "^1.2.6",
+    "vuetify": "^1.5.14"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "generate": "nuxt generate",
+    "analyze": "nuxt build --analyze"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9",
+    "frontmatter-markdown-loader": "^1.6.0",
+    "highlight.js": "^9.15.6",
+    "node-sass": "^4.11.0",
+    "responsive-loader": "^1.2.0",
+    "sass-loader": "^7.1.0",
+    "sharp": "^0.22.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2"
   }

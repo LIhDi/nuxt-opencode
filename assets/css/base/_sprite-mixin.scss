@@ -1,0 +1,24 @@
+@function divideEscape0($a,$b){
+  @if ($b ==0){@return 0}
+  @return $a/$b;
+}
+@function getImagePositionFromSprite($iconName,$sprite-name,$columns,$rows){
+  $index: index($sprite-name,$iconName);
+  $row: ceil($index/$columns);
+  $column: $index % $columns;
+  @return percentage(divideEscape0(1,($columns - 1))*($column - 1)) percentage(divideEscape0(1,($rows - 1))*($row - 1));
+}
+  
+@mixin backgroundImageBySprite($sprite,$name){
+  background-image: url(map_get($sprite,url));
+  background-position: getImagePositionFromSprite(
+    $name,
+    map_get($sprite,names),
+    map_get($sprite,columns),
+    map_get($sprite,rows)
+  );
+  background-size: cover;
+  display: inline-block;
+} 
+
+  
