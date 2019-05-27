@@ -4,7 +4,6 @@
       <div>
         <h2>{{ $t('posts') }}</h2>
       </div>
-      <LangSwitcher/>
     </div>
     <ul class="blogs">
       <blog-card
@@ -16,10 +15,8 @@
 </template>
 <script>
 import BlogCard from "~/components/BlogCard.vue";
-import LangSwitcher from '~/components/LangSwitcher'
-
 export default {
-  components: { BlogCard, LangSwitcher },
+  components: { BlogCard },
   props: {
     blogs: {
       type: Array
@@ -30,10 +27,10 @@ export default {
 <style lang="scss">
 .blogs {
   margin: 0;
-  
+
   @media (min-width: $screen-sm){
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 10px;
     display: grid;
   }
 
@@ -41,7 +38,6 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 4rem;
   }
 }
 </style>

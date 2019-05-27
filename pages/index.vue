@@ -1,8 +1,20 @@
 <template>
   <div class="page-index">
-    <div class="container">
-      <BlogSection :blogs="blogs"/>
-    </div>
+    <v-container fluid >
+      <v-layout row wrap>
+        <v-flex d-flex xs12 sm6 md3 >
+        </v-flex>
+        <v-flex d-flex xs12 sm6 md6>
+          <v-card color="white" >
+          <v-card-title>
+            <BlogSection :blogs="blogs"/>
+          </v-card-title>
+          </v-card>
+        </v-flex>
+          <v-flex d-flex xs12 sm6 md3>
+        </v-flex>
+      </v-layout>
+    </v-container>
   </div>
 </template>
 
@@ -16,7 +28,7 @@
     async asyncData ({app}) {
 
       const blogs = app.i18n.locale === 'en' ? blogsEn : blogsPt
-      
+
       async function asyncImport (blogName) {
         const wholeMD = await import(`~/contents/${app.i18n.locale}/blog/${blogName}.md`)
         return wholeMD.attributes
@@ -29,7 +41,7 @@
         }
       })
     },
-    
+
     components: { BlogSection },
 
     transition: {
