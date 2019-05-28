@@ -9,7 +9,7 @@
         <v-spacer></v-spacer>
         <v-btn color="white" icon><v-icon>search</v-icon></v-btn>
         <v-btn color="white" icon><v-icon>apps</v-icon></v-btn>
-        <v-btn color="white" icon><v-icon>more_vert</v-icon></v-btn>
+        <LangSwitcher/>
       </v-toolbar>
     <nuxt class="nuxt-content"/>
     <Footer/>
@@ -17,10 +17,11 @@
 </template>
 <script>
 import Footer from '~/components/Sections/Footer'
-
+import LangSwitcher from '~/components/LangSwitcher'
 export default {
   components: {
-    Footer
+    Footer,
+    LangSwitcher
   },
   data () {
     return {
@@ -37,6 +38,7 @@ export default {
 }
 
 .nuxt-content {
+  background: #F5F5F5;
   flex-grow: 1;
 }
 .v-tabs__item {

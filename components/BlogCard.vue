@@ -1,6 +1,6 @@
 <template>
   <li class="blog">
-    <nuxt-link 
+    <nuxt-link
       :to="localePath({ name: 'blog-slug', params: { slug: blog.name }})"
     >
       <ImageResponsive
