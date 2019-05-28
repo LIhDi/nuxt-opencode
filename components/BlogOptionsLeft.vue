@@ -1,5 +1,6 @@
 <template>
-<v-flex xs12>
+<v-flex xs12 id="div-desktop">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <v-btn color="blue lighten-1"  outiline style="margin-top: 40px" dark depressed large>VER TODOS</v-btn>
 <v-list subheader>
   <v-subheader>Categorias</v-subheader>
@@ -37,7 +38,7 @@
   }
 </script>
 
-<style>
+<style lang="postcss" scoped>
 .v-list{
   padding: 0;
   margin-top: 10px;
@@ -47,6 +48,14 @@
 }
 .v-list__tile__title:hover{
   color: #42A5F5;
+}
+#div-desktop{
+  display:none;
+}
+@media screen and (min-width: 701px) {
+  #div-desktop {
+    display: block;
+  }
 }
 </style>
 
