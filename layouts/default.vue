@@ -3,7 +3,6 @@
       <v-toolbar id="top" extended card prominent color="blue-grey lighten-1" tabs>
         <template v-slot:extension>
           <v-tabs dark color="transparent" fixed-tabs  slider-color="white">
-            
             <v-tab v-for="item in items" :key="item" >  {{ item }} </v-tab>
           </v-tabs>
         </template>
