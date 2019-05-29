@@ -52,7 +52,7 @@
 #div-desktop{
   display:none;
 }
-@media screen and (min-width: 701px) {
+@media screen and (min-width: 900px) {
   #div-desktop {
     display: block;
   }

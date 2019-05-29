@@ -64,6 +64,8 @@
       const attr = fileContent.attributes
       return {
         name: params.slug,
+        autor: attr.autor,
+        tipo: attr.tipo,
         title: attr.title,
         trans: attr.trans,
         year: attr.year,

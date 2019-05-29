@@ -1,15 +1,17 @@
 ---
 name: 'post2'
 trans: 'post2'
-title: Post Dois
+tipo: 'DevOps'
+title: Como instalar Docker no Ubuntu 18.04
 year: 1 Maio 2019
-color: '#edece7'
+color: '#0288D1'
 isTextColorDark: true
 noMainImage: true
 extraComponent: 'Datatable'
 id: 'post2'
+autor: 'LihDi'
 description: |
-  Descrição Post Dois
+  Instalação do Docker.
 ---
 
 ## Post 2

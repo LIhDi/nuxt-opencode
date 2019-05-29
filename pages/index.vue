@@ -6,11 +6,7 @@
             <BlogOptionsLeft/>
         </v-flex>
         <v-flex d-flex xs12 sm6 md8>
-          <v-card color="transparent" >
-            <v-card-title >
               <BlogSection :blogs="blogs"/>
-            </v-card-title>
-          </v-card>
         </v-flex>
         <v-flex d-flex xs12 sm6 md2>
         </v-flex>
@@ -43,21 +39,6 @@
 
   transition: { name: 'slide-fade' },
 
-  head () {
-    return {
-      title: this.$t('indexPageHead.title'),
-      htmlAttrs: { lang: this.$i18n.locale },
-      meta: [
-        { name: "author", content: "LihDi" },
-        { name: "description", property: "og:description", content: this.$t('indexPageHead.description'), hid: "description" },
-        { property: "og:title", content: this.$t('indexPageHead.title') },
-        { property: "og:image", content: this.ogImage },
-        { name: "twitter:description", content: this.$t('indexPageHead.description') },
-        { name: "twitter:image", content: this.ogImage }
-      ]
-    };
-  },
-
   computed: {
     ogImage: function () {
       return;
@@ -65,12 +46,3 @@
   }
 }
 </script>
-
-<style lang="scss">
-.v-card__title:hover{
-  background:#F5F5F5;
-}
-.v-card{
-  box-shadow: none;
-}
-</style>

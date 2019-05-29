@@ -1,10 +1,5 @@
 <template>
   <section>
-    <div class="blogs__top">
-      <div>
-        <h2>{{ $t('posts') }}</h2>
-      </div>
-    </div>
     <ul class="blogs">
       <blog-card
         v-for="blog in blogs"
@@ -29,7 +24,7 @@ export default {
   margin: 0;
 
   @media (min-width: $screen-sm){
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
     display: grid;
   }
