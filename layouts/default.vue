@@ -1,15 +1,15 @@
 <template>
   <div class="layout">
-    <v-toolbar id="top" extended card prominent color="blue-grey lighten-1" tabs>
-      <template v-slot:extension>
-        <v-tabs dark color="transparent" fixed-tabs  slider-color="white">
+    <v-toolbar card prominent tabs>
+        <v-tabs class="hidden-xs-only" color="transparent" fixed-tabs >
           <v-tab v-for="item in items" :key="item" >  {{ item }} </v-tab>
         </v-tabs>
-      </template>
-      <v-spacer></v-spacer>
-      <v-btn color="white" icon><v-icon>search</v-icon></v-btn>
-      <v-btn color="white" icon><v-icon>apps</v-icon></v-btn>
-      <LangSwitcher/>
+        <v-tabs class="hidden-sm-and-up" color="transparent">
+          <v-toolbar-side-icon color="white" flat></v-toolbar-side-icon>
+          <v-tab>HOME </v-tab>
+        </v-tabs>
+
+      <!-- <LangSwitcher/> -->
     </v-toolbar>
     <nuxt class="nuxt-content"/>
     <Footer/>
@@ -24,7 +24,8 @@ export default {
   components: { Footer, LangSwitcher },
   data () {
     return {
-      items: [ 'HOME', 'DEVOPS', 'LINUX', 'TEAM', 'CODE']
+      dialog: false,
+      items: [ 'HOME', 'TUTORIAIS', 'SCRIPTS', 'PROJETOS', 'EQUIPE', 'CONTATO']
     }
   }
 }
@@ -41,11 +42,22 @@ export default {
   flex-grow: 1;
 }
 .v-tabs__item {
-  color:white;
+  color:blue;
   font-size: 15px;
 }
 .v-tabs__item:hover {
-  color:white;
+  color:#F06292;
   font-size: 17px;
 }
+.v-dialog--fullscreen {
+border-radius: 0;
+margin: 0;
+height: 100%;
+position: fixed;
+overflow-y: auto;
+top: 100px; //Depending on the header height you want to show.
+left: 0;
+}
+
+
 </style>

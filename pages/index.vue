@@ -2,13 +2,12 @@
   <div class="page-index">
     <v-container fluid >
       <v-layout row wrap>
-        <v-flex d-flex xs12 sm6 md2 >
-            <BlogOptionsLeft/>
+        <v-flex xs0 sm0 md2 >
         </v-flex>
-        <v-flex d-flex xs12 sm6 md8>
+        <v-flex xs12 sm12 md8>
               <BlogSection :blogs="blogs"/>
         </v-flex>
-        <v-flex d-flex xs12 sm6 md2>
+        <v-flex xs0 sm0 md2>
         </v-flex>
       </v-layout>
     </v-container>

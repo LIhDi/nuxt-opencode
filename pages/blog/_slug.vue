@@ -1,71 +1,58 @@
 <template>
-  <div class="blogSelected">
-    <div class="intro">
-      <div class="elevate-cover">
-        <div class="elevate-cover__textOffset">
+  <div>
+    <v-container fluid >
+      <v-layout row wrap>
+        <v-flex xs12 sm12 md12 class="pa-3" >
+          <nuxt-link :to="localePath('index')">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 4" aria-hidden="true" style="width: 16px; transform: rotate(180deg);">
+              <polygon fill="currentColor" points="0 2.33 4.72 2.33 3.53 3.53 4 4 6 2 4 0 3.53 0.47 4.72 1.67 0 1.67 0 2.33"/>
+            </svg>
+            {{ $t('comeBack') }}
+          </nuxt-link>
+        </v-flex>
+        <v-chip class="ml-3" color="grey" text-color="white">{{tipo}}</v-chip>
+        <v-chip color="grey" text-color="white">{{tecnologia}}</v-chip>
+        <v-flex xs12 sm12 md12 class="pa-3">
           <div class="elevate-cover__left">
-            <nuxt-link :to="localePath('index')">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 4" aria-hidden="true" style="width: 16px; transform: rotate(180deg);">
-                  <polygon fill="currentColor" points="0 2.33 4.72 2.33 3.53 3.53 4 4 6 2 4 0 3.53 0.47 4.72 1.67 0 1.67 0 2.33"/>
-              </svg>
-              {{ $t('comeBack') }}
-            </nuxt-link>
-          </div>
-          <div class="elevate-cover__left">
-            <span class="blogSelected-year">{{ year }}</span>
-            —
+            <span >{{ year }}</span>—
             <nuxt-link
               v-if="trans"
               v-for="(locale, i) in showLocales"
               :key="i"
-              :to="`${locale.code == 'en' ? '' : '/' + locale.code}/blog/${trans}`"
-            >
-                {{ $t('changeLanguagePost') }}
+              :to="`${locale.code == 'en' ? '' : '/' + locale.code}/blog/${trans}`">
+              {{ $t('changeLanguagePost') }}
             </nuxt-link>
             <span v-else>{{ $t('soonLanguagePost') }}</span>
-            <h1 class="elevate-cover__title">
-              {{ title }}
-            </h1>
+            <h1 class="elevate-cover__title">{{ title }}</h1>
             <p class="elevate-cover__description">{{ description }}</p>
           </div>
-        </div>
-        <ImageResponsive
-          :imageURL="'blog/' + id + '/_main.jpg'"
-          v-if="!noMainImage"
-          width="100%"
-          class="elevate-cover__img"
-          :alt="'Blog picture'" />
-        <component
-          v-else
-          class="elevate-cover__img"
-          :is="extraComponentLoader"
-        />
-      </div>
-    </div>
-    <div class="container small">
-      <DynamicMarkdown
-        :render-func="renderFunc"
-        :static-render-funcs="staticRenderFuncs"
-        :extra-component="extraComponent" />
-    </div>
-    <Subscribe/>
+          <span class="subheading mr-2">por {{autor}}</span>
+        </v-flex>
+        <v-flex>
+          <div class="container small">
+            <DynamicMarkdown
+              :render-func="renderFunc"
+              :static-render-funcs="staticRenderFuncs"
+              :extra-component="extraComponent" />
+          </div>
+          <Subscribe/>
+        </v-flex>
+      </v-layout>
+    </v-container>
   </div>
 </template>
-
 <script lang="js">
-  
   import DynamicMarkdown from "~/components/Markdown/DynamicMarkdown.vue"
-
-
   export default {
-
     async asyncData ({params, app}) {
       const fileContent = await import(`~/contents/${app.i18n.locale}/blog/${params.slug}.md`)
       const attr = fileContent.attributes
       return {
+        tempoLeitura: attr.tempoLeitura,
         name: params.slug,
         autor: attr.autor,
         tipo: attr.tipo,
+        tecnologia: attr.tecnologia,
         title: attr.title,
         trans: attr.trans,
         year: attr.year,
@@ -150,58 +137,14 @@
 </script>
 
 <style lang="scss">
-.overflowhidden {
-  overflow: hidden;
-}
-.blogSelected-horizontalImage {
-  height: 56rem;
-  background-size: contain;
-  transition: all ease .35s;
-  opacity: 0;
-
-  &[lazy='loading'] {
-    filter: blur(15px);
-    background-repeat: no-repeat!important;
-    background-size: contain!important;
-  }
-  &[lazy='loaded'] {
-    opacity: 1;
-    background-repeat: no-repeat!important;
-    background-size: contain!important;
-  }
-  .intro {
-    display: flex;
-  }
-}
 .elevate-cover {
-  display: flex;
-  flex-direction: column;
   min-height: 459px;
 
-  @media (min-width: $screen-md){
-    flex-direction: row;
-  }
-
-  &__img, &__textOffset {
-    width: 100%;
-  }
-
   &__left {
-    max-width: 500px;
+    max-width: 600px;
     width: 100%;
     padding: 2.4rem;
     margin-bottom: auto;
-
-    @media (min-width: $screen-md){
-      margin-left: auto;
-      padding: 2.4rem 4rem 2.4rem 2.4rem;
-    }
-  }
-
-  &__textOffset {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 
   &__title {
@@ -228,12 +171,6 @@
   line-height: 1.7;
   color: $secondary;
 
-  > *:not(.datagrid):not(.image-placeholder) {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
 
   @media (min-width: $screen-sm){
     padding: 7.2rem 0;
@@ -259,11 +196,9 @@
   }
 
   pre {
-    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
     padding: 2.4rem;
     border-radius: 4px;
     background-color: #f6f8fa;
-    overflow-x: scroll;
     display: block;
     margin-bottom: 5rem;
 
@@ -278,7 +213,6 @@
     display: inline;
     color: $secondary;
     font-size: 14px;
-    padding: .2em .4em;
 
     @media (min-width: $screen-sm){
       font-size: 16px;
