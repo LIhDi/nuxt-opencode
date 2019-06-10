@@ -4,7 +4,7 @@ tipo: 'Back-end'
 tecnologia: 'Go'
 title: Post Three
 year: 23 January 2019
-color: '#0277BD'
+color: '#BDBDBD'
 noMainImage: true
 isTextColorDark: true
 trans: 'post-3'

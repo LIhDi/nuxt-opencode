@@ -4,7 +4,7 @@ tipo: 'DevOps'
 trans: 'post2'
 title: Post Two
 year: 1 May 2019
-color: '#0288D1'
+color: '#C8E6C9'
 isTextColorDark: true
 noMainImage: true
 extraComponent: 'Datatable'

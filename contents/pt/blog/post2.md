@@ -4,7 +4,7 @@ tipo: 'DevOps'
 tecnologia: 'Docker'
 title: Como instalar Docker no Ubuntu 18.04
 year: 1 Maio 2019
-color: '#0288D1'
+color: '#C8E6C9'
 isTextColorDark: true
 noMainImage: true
 id: 'post2'
