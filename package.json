@@ -17,7 +17,7 @@
     "vuetify": "^1.5.14"
   },
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt --hostname 0.0.0.0 --port 35900",
     "generate": "nuxt generate",
     "analyze": "nuxt build --analyze"
   },

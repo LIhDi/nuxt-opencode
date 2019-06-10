@@ -8,13 +8,13 @@
         <v-responsive class="text-xs-center">
           <br/>
             <ImageResponsive
-                :imageURL="`blog/post1/lihdi.png`"
+                :imageURL="`blog/post1/docker.png`"
                 :classes="'cardThumbnail'"/>
         </v-responsive>
         <v-card color="white" class="text-xs-left pt-2">
           <v-card-text>
-            <span class="heading grey--text">{{blog.title}}</span>
-            <p class="subheading grey--text">{{blog.year}}</p>
+            <span class="subheading grey--text">{{blog.title}}</span>
+            <p class="heading grey--text">{{blog.year}}</p>
           </v-card-text>
         </v-card>
         </v-card>
@@ -53,5 +53,6 @@
   }
   #card-um{
     border-radius: 10px;
+    background-image: radial-gradient(deepskyblue 45%, dodgerblue 80%);
   }
 </style>

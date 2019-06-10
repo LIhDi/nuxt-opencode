@@ -197,7 +197,7 @@
 
   pre {
     padding: 2.4rem;
-    border-radius: 4px;
+    border-radius: 0px;
     background-color: #f6f8fa;
     display: block;
     margin-bottom: 5rem;
@@ -209,7 +209,7 @@
 
   code {
     background: #f3f4f4;
-    border-radius: 4px;
+    border-radius: 0px;
     display: inline;
     color: $secondary;
     font-size: 14px;
