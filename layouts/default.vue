@@ -2,7 +2,7 @@
   <div class="layout">
     <v-toolbar card prominent tabs>
         <v-tabs class="hidden-xs-only" color="transparent" fixed-tabs >
-          <v-tab to="tutoriais" @click="teste" v-for="item in items" :key="item" >{{ item }} </v-tab>
+          <v-tab v-for="item in items" to="/tutoriais" :key="item" >  {{ item }} </v-tab>
         </v-tabs>
         <v-tabs class="hidden-sm-and-up" color="transparent">
           <v-toolbar-side-icon color="white" flat></v-toolbar-side-icon>
