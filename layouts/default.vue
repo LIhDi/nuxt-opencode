@@ -5,7 +5,7 @@
           <v-tab v-for="item in items" to="/tutoriais" :key="item" >  {{ item }} </v-tab>
         </v-tabs>
         <v-tabs class="hidden-sm-and-up" color="transparent">
-          <v-toolbar-side-icon color="white" flat></v-toolbar-side-icon>
+          <v-toolbar-side-icon class="white pink--text" outline flat></v-toolbar-side-icon>
           <v-tab>HOME </v-tab>
         </v-tabs>
 
@@ -24,14 +24,8 @@ export default {
   components: { Footer, LangSwitcher },
   data () {
     return {
-      blog: { teste: '45454'},
       dialog: false,
       items: [ 'HOME', 'TUTORIAIS', 'SCRIPTS', 'PROJETOS', 'EQUIPE', 'CONTATO']
-    }
-  },
-  methods: {
-    teste () {
-      this.$store.commit('filtro/add', 'hgjhgv' )
     }
   }
 }

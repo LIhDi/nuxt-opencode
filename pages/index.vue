@@ -15,7 +15,7 @@
 </template>
 
 <script>
-  import BlogSection from "~/components/Sections/BlogSection"
+  import BlogSection from '~/components/Sections/BlogSection'
   import blogsEn from '~/contents/en/blogsEn.js'
   import blogsPt from '~/contents/pt/blogsPt.js'
 
