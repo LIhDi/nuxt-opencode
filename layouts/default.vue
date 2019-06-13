@@ -10,7 +10,18 @@
         </v-tabs>
       <!-- <LangSwitcher/> -->
     </v-toolbar>
-    <v-navigation-drawer width="400" v-model="drawer.open" app >teste</v-navigation-drawer>
+    <v-navigation-drawer class="pink" width="350" v-model="drawer.open" app >
+      <v-container fluid>
+      <v-layout row wrap>
+      <v-flex xs2 offset-xs10  >
+              <v-btn class="transparent white--text" @click="toggleDrawer" flat icon><v-icon>mdi-close</v-icon></v-btn>
+        </v-flex>
+      <v-flex class="text-xs-center white--text  " xs12 v-for="options in menuOptions" :key="options.title" >
+              <span class="title">{{options.title}}</span>
+        </v-flex>
+        </v-layout >
+        </v-container>
+    </v-navigation-drawer>
     <nuxt class="nuxt-content"/>
     <Footer/>
   </div>
@@ -24,10 +35,18 @@ export default {
   components: { Footer, LangSwitcher },
   data () {
     return {
-      dialog: false,
+      menuOptions: [
+          { active: true, title: 'Front-end', icone: ''},
+          { active: true, title: 'Back-end', icone: ''},
+          { title: 'Mobile', icone: ''},
+          { title: 'DevOps', icone: ''},
+          { title: 'Design', icone: ''},
+          { title: 'Database', icone: ''},
+          { title: 'API', icone: ''}
+        ],
       items: [ 'HOME', 'TUTORIAIS', 'SCRIPTS', 'PROJETOS', 'EQUIPE', 'CONTATO'],
       drawer: {
-      open: false
+        open: false
     }
   }
 },
@@ -40,6 +59,10 @@ export default {
 </script>
 
 <style lang="scss">
+.v-navigation-drawer{
+  opacity: 0.9;
+}
+
 .layout {
   display: flex;
   flex-direction: column;
