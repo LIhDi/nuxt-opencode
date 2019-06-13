@@ -5,12 +5,12 @@
           <v-tab v-for="item in items" to="/tutoriais" :key="item" >  {{ item }} </v-tab>
         </v-tabs>
         <v-tabs class="hidden-sm-and-up" color="transparent">
-          <v-toolbar-side-icon class="white pink--text" outline flat></v-toolbar-side-icon>
-          <v-tab>HOME </v-tab>
+          <v-toolbar-side-icon @click.stop="toggleDrawer" class="white pink--text" outline flat></v-toolbar-side-icon>
+          <v-tab >HOME </v-tab>
         </v-tabs>
-
       <!-- <LangSwitcher/> -->
     </v-toolbar>
+    <v-navigation-drawer width="400" v-model="drawer.open" app >teste</v-navigation-drawer>
     <nuxt class="nuxt-content"/>
     <Footer/>
   </div>
@@ -25,7 +25,15 @@ export default {
   data () {
     return {
       dialog: false,
-      items: [ 'HOME', 'TUTORIAIS', 'SCRIPTS', 'PROJETOS', 'EQUIPE', 'CONTATO']
+      items: [ 'HOME', 'TUTORIAIS', 'SCRIPTS', 'PROJETOS', 'EQUIPE', 'CONTATO'],
+      drawer: {
+      open: false
+    }
+  }
+},
+  methods: {
+    toggleDrawer () {
+      this.drawer.open = !this.drawer.open
     }
   }
 }
