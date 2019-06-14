@@ -1,9 +1,17 @@
 <template>
   <div class="layout">
-    <v-toolbar height="50" card prominent tabs>
-        <v-tabs class="hidden-xs-only" color="transparent" fixed-tabs >
-          <v-tab v-for="item in items" to="/tutoriais" :key="item" >  {{ item }} </v-tab>
+    <v-toolbar height="50" card tabs>
+      <v-flex class="hidden-xs-only" sm10 md10>
+        <v-tabs color="transparent" >
+          <v-tab v-for="item in menuItems" :to="item.url" :key="item.title" ><v-btn flat class="caption transparent transparent">{{item.title}}</v-btn> </v-tab>
         </v-tabs>
+      </v-flex>
+      <v-flex class="hidden-xs-only" sm2 md2>
+        <v-btn icon small outline class="white pink--text"><v-icon>mdi-facebook</v-icon></v-btn>
+        <v-btn icon small outline class="ml-0 white pink--text"><v-icon>mdi-instagram</v-icon></v-btn>
+        <v-btn icon small outline class="ml-0 white pink--text"><v-icon>mdi-git</v-icon></v-btn>
+
+      </v-flex>
         <v-tabs class="hidden-sm-and-up" color="transparent">
           <v-toolbar-side-icon @click.stop="toggleDrawer" class="white pink--text" outline flat></v-toolbar-side-icon>
           <v-tab >HOME </v-tab>
@@ -36,13 +44,21 @@ export default {
   data () {
     return {
       menuOptions: [
-          { active: true, title: 'Front-end', icone: ''},
-          { active: true, title: 'Back-end', icone: ''},
-          { title: 'Mobile', icone: ''},
-          { title: 'DevOps', icone: ''},
-          { title: 'Design', icone: ''},
-          { title: 'Database', icone: ''},
-          { title: 'API', icone: ''}
+          { active: true, title: 'Front-end', icone: '', url:'/tutoriais'},
+          { active: true, title: 'Back-end', icone: '', url:'/tutoriais'},
+          { title: 'Mobile', icone: '', url:'/tutoriais'},
+          { title: 'DevOps', icone: '', url:'/tutoriais'},
+          { title: 'Design', icone: '', url:'/tutoriais'},
+          { title: 'Database', icone: '', url:'/tutoriais'},
+          { title: 'API', icone: '', url:'/tutoriais'}
+        ],
+        menuItems: [
+          { title: 'HOME', icone: '', url:'/'},
+          { title: 'TUTORIAIS', icone: '', url:'/tutoriais'},
+          { title: 'SCRIPTS', icone: '', url:'/'},
+          { title: 'PROJETOS', icone: '', url:'/'},
+          { title: 'EQUIPE', icone: '', url:'/'},
+          { title: 'CONTATO', icone: '', url:'/'}
         ],
       items: [ 'HOME', 'TUTORIAIS', 'SCRIPTS', 'PROJETOS', 'EQUIPE', 'CONTATO'],
       drawer: {
@@ -58,7 +74,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" >
 .v-navigation-drawer{
   opacity: 0.9;
 }
@@ -72,23 +88,4 @@ export default {
   background: white;
   flex-grow: 1;
 }
-.v-tabs__item {
-  color:blue;
-  font-size: 15px;
-}
-.v-tabs__item:hover {
-  color:#F06292;
-  font-size: 17px;
-}
-.v-dialog--fullscreen {
-border-radius: 0;
-margin: 0;
-height: 100%;
-position: fixed;
-overflow-y: auto;
-top: 100px; //Depending on the header height you want to show.
-left: 0;
-}
-
-
 </style>

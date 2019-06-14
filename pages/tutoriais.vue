@@ -56,6 +56,6 @@ export default {
 }
 .v-toolbar{
   border-left-style: solid;
-  border-left-width: 2px;
+  border-left-width: 3px;
 }
 </style>
