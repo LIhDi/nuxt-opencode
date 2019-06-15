@@ -7,10 +7,10 @@
     </v-toolbar>
     <v-container fluid >
       <v-layout row wrap>
-        <v-flex xs0 sm0 md3 class="pa-2 ml-4 hidden-xs-only">
+        <v-flex xs0 sm0 md3 class="pt-0 ml-4 hidden-xs-only">
           <BlogOptionsLeft/>
         </v-flex>
-        <v-flex xs12 sm12 md8 class="pt-4">
+        <v-flex xs12 sm12 md8 class="pt-5">
           <v-toolbar :style="'border-color:'+post.color" v-for="post in ListTutoriais" :key="post.title" flat>
             <v-toolbar-title>
               <span class="subheading">{{post.title}}</span><br/>
