@@ -15,13 +15,12 @@
 </template>
 
 <script>
-  import BlogOptionsLeft from "~/components/BlogOptionsLeft"
-  import BlogSection from "~/components/Sections/BlogSection"
+  import BlogSection from '~/components/Sections/BlogSection'
   import blogsEn from '~/contents/en/blogsEn.js'
   import blogsPt from '~/contents/pt/blogsPt.js'
 
   export default {
-    components: { BlogSection, BlogOptionsLeft },
+    components: { BlogSection },
     async asyncData ({app}) {
       const blogs = app.i18n.locale === 'en' ? blogsEn : blogsPt
       async function asyncImport (blogName) {

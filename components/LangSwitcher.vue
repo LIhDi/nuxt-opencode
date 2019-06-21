@@ -24,13 +24,11 @@ export default {
 </script>
 <style lang="scss">
 select {
+  font-size: 14px;
   border-radius: 0;
-  color: $primary;
+  color: #E91E63;
   padding: 1rem 3rem 1rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
-  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 50'><polygon fill='rgb(108, 92, 255)' points='0,0 100,0 50,50'/></svg>") no-repeat;
   background-size: 12px;
   background-position: calc(100% - 1rem) center;
   background-repeat: no-repeat;
@@ -38,9 +36,6 @@ select {
   transition: border-color .3s;
   cursor: pointer;
 
-  &:hover {
-    border-color: $primary;
-  }
 
   &:focus {
     outline: none;

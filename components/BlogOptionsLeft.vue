@@ -1,21 +1,20 @@
 <template>
-<v-flex xs12 id="div-desktop">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<v-btn color="blue lighten-1"  outiline style="margin-top: 40px" dark depressed large>VER TODOS</v-btn>
-<v-list subheader>
-  <v-subheader>Categorias</v-subheader>
-  <v-list-tile
-    v-for="item in items"
-    :key="item.title"
-    @click="">
-    <v-list-tile-content>
-      <v-list-tile-title v-html="item.title"></v-list-tile-title>
-    </v-list-tile-content>
-    <v-list-tile-action>
-      <v-icon :color="item.active ? 'blue lighten-1' : 'grey'">{{item.icone}}</v-icon>
-    </v-list-tile-action>
-  </v-list-tile>
-</v-list>
+<v-flex xs9 >
+  <v-list>
+    <v-btn class="pink white--text caption" flat >Mostrar Todos</v-btn>
+    <v-subheader>Categorias</v-subheader>
+    <v-list-tile
+      v-for="item in items"
+      :key="item.title"
+      @click="">
+      <v-list-tile-content>
+        <v-list-tile-title class="body-1" v-html="item.title"></v-list-tile-title>
+      </v-list-tile-content>
+      <v-list-tile-action>
+        <v-icon small :color="item.active ? 'pink' : 'grey'">{{item.icone}}</v-icon>
+      </v-list-tile-action>
+    </v-list-tile>
+  </v-list>
 </v-flex>
 </template>
 
@@ -47,15 +46,8 @@
   border-radius: 50px;
 }
 .v-list__tile__title:hover{
-  color: #42A5F5;
+  color: #E91E63;
 }
-#div-desktop{
-  display:none;
-}
-@media screen and (min-width: 900px) {
-  #div-desktop {
-    display: block;
-  }
-}
+
 </style>
 

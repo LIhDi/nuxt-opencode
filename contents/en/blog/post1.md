@@ -4,7 +4,7 @@ tipo: 'Front-end'
 title: Post One
 noMainImage: true
 year: 1 January 2019
-color: '#039BE5'
+color: '#81D4FA'
 trans: 'post1'
 id: 'post1'
 autor: 'LihDi'
@@ -53,7 +53,7 @@ description: |
   ```
   * Start no server
   ```sh
-  sudo service docker start	
+  sudo service docker start
   ```
   * Verificar a versão
   ```sh

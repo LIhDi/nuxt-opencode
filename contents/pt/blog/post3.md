@@ -4,7 +4,7 @@ tipo: 'Back-end'
 tecnologia: 'Go'
 title: Post Três
 year: 23 JAneiro 2019
-color: '#0277BD'
+color: '#BDBDBD'
 isTextColorDark: true
 trans: 'post3'
 id: 'post3'

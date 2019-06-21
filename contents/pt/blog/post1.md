@@ -5,7 +5,7 @@ tempoleitura: '4 minutos'
 tecnologia: 'Docker'
 title: Como Instalar Docker no Ubuntu 18.04
 year: 9 Junho 2019
-color: '#81C784'
+color: '#81D4FA'
 id: 'post1'
 autor: 'LihDi'
 noMainImage: true
@@ -54,7 +54,7 @@ description: |
   ```
   * Start no server
   ```sh
-  sudo service docker start	
+  sudo service docker start
   ```
   * Verificar a versão
   ```sh
