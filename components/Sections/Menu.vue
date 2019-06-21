@@ -1,10 +1,12 @@
 <template>
   <div>
-    <v-toolbar height="45" card tabs>
+    <v-toolbar class="menubar" height="45" card tabs>
       <v-flex class="hidden-xs-only" sm10 md10>
         <v-layout align-center justify-space-around>
         <v-flex  xs12 sm12 md12>
-          <v-btn @mouseover="showByIndex = true" @mouseout="showByIndex = null" v-for="item in menuItems" :to="item.url" :key="item.title" flat class="caption">{{item.title}}</v-btn>
+          <v-btn @mouseover="showByIndex = true" @mouseout="showByIndex = null" v-for="item in menuItems" :to="item.url" :key="item.title" flat class="caption white--text">
+            {{item.title}}
+          </v-btn>
         </v-flex>
         </v-layout>
       </v-flex>
@@ -77,5 +79,12 @@ export default {
 }
 .v-btn__content:hover{
   color: #E91E63;
+}
+.menubar{
+  background-image: linear-gradient(to right, rgb(146, 68, 236), rgb(255, 233, 255));
+}
+.caption {
+  color: white;
+  font-weight: bold;
 }
 </style>
