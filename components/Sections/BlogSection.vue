@@ -1,11 +1,20 @@
 <template>
   <section>
-    <ul class="blogs">
-      <blog-card
-        v-for="blog in blogs"
-        :key="blog.name"
-        :blog="blog" />
-    </ul>
+    <v-container fluid >
+      <v-layout row wrap>
+        <v-flex xs12 sm12 md7 class="pa-3">
+                <blog-card :altura="420" :blog="blogs[1]" />
+        </v-flex>
+        <v-flex xs12 sm12 md5 class="pa-3">
+                <v-flex xs12 sm12 md12 >
+                  <blog-card :altura="200" :blog="blogs[1]" />
+                </v-flex>
+                <v-flex xs12 sm12 md12 class="pt-3 ">
+                  <blog-card :altura="200" :blog="blogs[1]" />
+                </v-flex>
+        </v-flex>
+      </v-layout>
+    </v-container>
   </section>
 </template>
 <script>
@@ -19,21 +28,5 @@ export default {
   }
 }
 </script>
-<style lang="scss">
-.blogs {
-  margin: 0;
 
-  @media (min-width: $screen-sm){
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
-    display: grid;
-  }
-
-  &__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-}
-</style>
 

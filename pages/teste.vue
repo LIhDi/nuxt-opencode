@@ -1,12 +1,34 @@
 <template>
-  <div>
-      <v-container fluid grid-list-sm>
+  <div id="app" >
+    <v-container fluid grid-list-md>
+      <v-layout row wrap>
+        <v-flex d-flex xs12 sm6 md4>
+          <v-card color="purple" dark>
+            {{ lorem }}
+          </v-card>
+        </v-flex>
+        <v-flex d-flex xs12 sm6 md3>
           <v-layout row wrap>
-            <v-flex v-for="i in 6" :key="i" xs4>
-             teste
+            <v-flex d-flex>
+              <v-card color="indigo" dark>
+                {{ lorem }}
+              </v-card>
+            </v-flex>
+            <v-flex d-flex>
+              <v-layout row wrap>
+                <v-flex d-flex xs12 >
+                  <v-card
+                    color="red lighten-2"
+                    dark>
+                    {{ lorem }}
+                  </v-card>
+                </v-flex>
+              </v-layout>
             </v-flex>
           </v-layout>
-        </v-container>
+        </v-flex>
+      </v-layout>
+    </v-container>
   </div>
 </template>
 <script>

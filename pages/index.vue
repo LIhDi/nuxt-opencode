@@ -1,16 +1,7 @@
 <template>
-  <div class="page-index">
-    <v-container fluid >
-      <v-layout row wrap>
-        <v-flex xs0 sm0 md2 >
-        </v-flex>
-        <v-flex xs12 sm12 md8>
+  <div 
+  >
               <BlogSection :blogs="blogs"/>
-        </v-flex>
-        <v-flex xs0 sm0 md2>
-        </v-flex>
-      </v-layout>
-    </v-container>
   </div>
 </template>
 
