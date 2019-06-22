@@ -54,10 +54,10 @@ export default {
           menuItems: [
             { title: 'HOME', icone: '', url:'/'},
             { title: 'TUTORIAIS', icone: '', url:'/tutoriais'},
-            { title: 'SCRIPTS', icone: '', url:'/teste'},
-            { title: 'PROJETOS', icone: '', url:'/65'},
-            { title: 'EQUIPE', icone: '', url:'/5656'},
-            { title: 'CONTATO', icone: '', url:'/5756'}
+            { title: 'SCRIPTS', icone: '', url:'/scripts'},
+            { title: 'PROJETOS', icone: '', url:'/projetos'},
+            { title: 'EQUIPE', icone: '', url:'/equipe'},
+            { title: 'CONTATO', icone: '', url:'/contato'}
           ],
           items: [ 'pt', 'en'],
           drawer: { open: false }

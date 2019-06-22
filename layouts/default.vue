@@ -1,8 +1,8 @@
 <template>
   <div class="layout">
-    <Menu />
-    <nuxt class="nuxt-content" />
-    <Footer />
+    <Menu class="menu-fixo" />
+    <nuxt class="nuxt-content pos-menu-fixo" />
+    <Footer class="pos-menu-fixo" />
   </div>
 </template>
 <script>
@@ -21,5 +21,13 @@ export default {
 .nuxt-content {
   background: white;
   flex-grow: 1;
+}
+.menu-fixo {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+.pos-menu-fixo {
+  margin-top: 45px;
 }
 </style>
