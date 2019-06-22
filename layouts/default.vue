@@ -1,13 +1,16 @@
 <template>
   <div class="layout">
     <Menu />
-    <nuxt class="nuxt-content"/>
-    <Footer/>
+    <nuxt class="nuxt-content" />
+    <Footer />
   </div>
 </template>
 <script>
 import Menu from '~/components/Sections/Menu'
 import Footer from '~/components/Sections/Footer'
+export default {
+  components: { Menu, Footer }
+}
 </script>
 <style lang="scss" >
 .layout {
