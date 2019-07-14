@@ -2,7 +2,7 @@
   <div class="layout">
     <Menu class="menu-fixo" />
     <nuxt class="nuxt-content pos-menu-fixo" />
-    <Footer class="pos-menu-fixo" />
+    <!-- <Footer class="pos-menu-fixo" /> -->
   </div>
 </template>
 <script>
@@ -14,9 +14,9 @@ export default {
 </script>
 <style lang="scss" >
 .layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  //sdisplay: flex;
+  //flex-direction: column;
+  //min-height: 100vh;
 }
 .nuxt-content {
   background: white;
