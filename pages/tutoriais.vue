@@ -1,9 +1,9 @@
 <template>
   <div>
-    <v-toolbar height="37" flat color="pink">
+    <v-toolbar height="37" flat color="grey lighten-4">
       <v-spacer></v-spacer>
-      <v-btn class="pink white--text" icon><v-icon>mdi-apps</v-icon></v-btn>
-      <v-btn class="pink white--text" icon><v-icon>mdi-format-list-bulleted</v-icon></v-btn>
+      <v-btn class="transparent pink--text" icon><v-icon>mdi-apps</v-icon></v-btn>
+      <v-btn class="transparent pink--text" icon><v-icon>mdi-format-list-bulleted</v-icon></v-btn>
     </v-toolbar>
     <v-container fluid >
       <v-layout row wrap>

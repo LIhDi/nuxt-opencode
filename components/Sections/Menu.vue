@@ -11,14 +11,14 @@
         </v-layout>
       </v-flex>
       <v-flex class="hidden-xs-only" sm2 md2>
-        <v-btn icon small outline class="white pink--text"><v-icon>mdi-facebook</v-icon></v-btn>
-        <v-btn icon small outline class="ml-0 white pink--text"><v-icon>mdi-instagram</v-icon></v-btn>
-        <v-btn icon small outline class="ml-0 white pink--text"><v-icon>mdi-git</v-icon></v-btn>
+        <v-btn icon small outline class="transparent white--text"><v-icon>mdi-facebook</v-icon></v-btn>
+        <v-btn icon small outline class="ml-0 transparent white--text"><v-icon>mdi-instagram</v-icon></v-btn>
+        <v-btn icon small outline class="ml-0 transparent white--text"><v-icon>mdi-github-circle</v-icon></v-btn>
         <LangSwitcher/>
       </v-flex>
       <v-tabs class="hidden-sm-and-up" color="transparent">
-        <v-toolbar-side-icon @click.stop="toggleDrawer" class="white pink--text" outline flat></v-toolbar-side-icon>
-        <v-tab >HOME </v-tab>
+        <v-toolbar-side-icon @click.stop="toggleDrawer" class="transparent white--text" outline flat></v-toolbar-side-icon>
+        <v-tab class="white--text font-weight-bold body-2">HOME </v-tab>
       </v-tabs>
     </v-toolbar>
     <v-navigation-drawer class="pink hidden-sm-and-up" width="450" v-model="drawer.open" app >
@@ -81,7 +81,7 @@ export default {
   color: #E91E63;
 }
 .menubar{
-  background-image: linear-gradient(to right, rgb(146, 68, 236), rgb(255, 233, 255));
+  background-image: linear-gradient(to right, rgba(241, 41, 108, 0.945), rgb(230, 148, 179));
 }
 .caption {
   color: white;
