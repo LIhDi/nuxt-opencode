@@ -19,7 +19,7 @@
         </v-flex>
         <v-flex xs12 sm12 md5>
           <span class="body-2 grey--text">Sou uma pessoa apaixonada por tecnologia, busco sempre a melhoria contínua, 
-             para mim é um privilégio contribuir com a comunidade...
+             para mim é um privilégio contribuir com a comunidade.
           </span>
         </v-flex>
     </v-layout>
