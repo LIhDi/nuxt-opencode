@@ -9,7 +9,7 @@
         </v-flex>
         <v-flex xs12 sm12 md3 >
           <div class="body-1">
-          <span class="body-2">Aline Diogo - LihDi</span><br/>
+          <span class="body-2 font-weight-bold">Aline Diogo - LihDi</span><br/>
           <v-icon>mdi-briefcase</v-icon><span>FullStack Developer</span><br/>
           <v-icon>mdi-map-marker</v-icon><span>Portugal</span><br/>
           <v-icon>mdi-earth</v-icon><span>Português - English</span><br/>
