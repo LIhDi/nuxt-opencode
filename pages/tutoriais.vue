@@ -34,7 +34,7 @@
 </template>
 <script>
 import ListTutoriais from '~/contents/listTutoriais.js'
-import BlogOptionsLeft from "~/components/BlogOptionsLeft"
+import BlogOptionsLeft from "~/components/tutoriais/BlogOptionsLeft"
 export default {
   components: { BlogOptionsLeft },
   data () {
