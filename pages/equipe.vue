@@ -14,7 +14,7 @@
           <v-icon>mdi-map-marker</v-icon><span class="ml-2">Portugal</span><br/>
           <v-icon>mdi-earth</v-icon><span class="ml-2">Português - English</span><br/>
           <v-btn href="https://github.com/LIhDi" icon small outline class="ml-0 transparent pink--text"><v-icon>mdi-github-circle</v-icon></v-btn>
-          <v-btn href="https://www.linkedin.com/in/aline-diogo-05572b142/" icon small outline class="ml-0 transparent pink--text"><v-icon>mdi-linkedin</v-icon></v-btn>
+          <v-btn href="https://www.linkedin.com/in/aline-diogo-dev/" icon small outline class="ml-0 transparent pink--text"><v-icon>mdi-linkedin</v-icon></v-btn>
           </div>
         </v-flex>
         <v-flex xs0 sm5 md5>
