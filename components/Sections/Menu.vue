@@ -7,16 +7,18 @@
             {{item.title}}
           </v-btn>
       </v-flex>
-      <v-flex class="show-md-and-up" sm4 md2>
+      <v-flex class="hidden-sm-and-up" xs6>
+        <v-tabs color="transparent">
+          <v-toolbar-side-icon @click.stop="toggleDrawer" class="transparent white--text" outline flat></v-toolbar-side-icon>
+          <v-tab class="white--text font-weight-bold body-2">Home </v-tab>
+        </v-tabs>
+      </v-flex>
+      <v-flex xs6 sm4 md2>
         <v-btn icon small outline class="transparent white--text"><v-icon>mdi-facebook</v-icon></v-btn>
         <v-btn icon small outline class="ml-0 transparent white--text"><v-icon>mdi-instagram</v-icon></v-btn>
         <v-btn icon small outline class="ml-0 transparent white--text"><v-icon>mdi-github-circle</v-icon></v-btn>
         <!--<LangSwitcher/>-->
       </v-flex>
-      <v-tabs class="hidden-sm-and-up" color="transparent">
-        <v-toolbar-side-icon @click.stop="toggleDrawer" class="transparent white--text" outline flat></v-toolbar-side-icon>
-        <v-tab class="white--text font-weight-bold body-2">HOME </v-tab>
-      </v-tabs>
       </v-layout>
     </v-toolbar>
     <v-navigation-drawer class="pink hidden-sm-and-up" width="450" v-model="drawer.open" app >
@@ -25,8 +27,10 @@
           <v-flex xs2 offset-xs10  >
             <v-btn class="transparent white--text" @click="toggleDrawer" flat icon><v-icon>mdi-close</v-icon></v-btn>
           </v-flex>
-          <v-flex class="text-xs-center white--text  " xs12 v-for="options in menuOptions" :key="options.title" >
-            <span class="title">{{options.title}}</span>
+          <v-flex class="text-xs-center white--text pa-4 " xs12 v-for="options in menuOptions" :key="options.title" >
+            <v-btn @mouseover="showByIndex = true" @mouseout="showByIndex = null" :to="options.url" :key="options.title" flat class="headline white--text">
+              {{options.title}}
+            </v-btn>
           </v-flex>
         </v-layout >
       </v-container>
@@ -76,7 +80,7 @@ export default {
   color: transparent;
 }
 .v-btn__content:hover{
-  color: #E91E63;
+  color: #F48FB1;
 }
 .menubar{
   background-image: linear-gradient(to right, rgba(241, 41, 108, 0.945), rgb(230, 148, 179));
