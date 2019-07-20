@@ -62,7 +62,7 @@ module.exports = {
       });
     }
   },
-  plugins: ['~/plugins/lazyload', '~plugins/vuetify.js', '~/plugins/globalComponents', { src: '~plugins/ga.js', ssr: false },{ src: '~/plugins/sw.js',ssr: false }],
+  plugins: ['~/plugins/lazyload', '~plugins/vuetify.js', '~/plugins/globalComponents', { src: '~plugins/ga.js', ssr: false }],
   modules: [
     '@nuxtjs/workbox',
     '@nuxtjs/pwa',
