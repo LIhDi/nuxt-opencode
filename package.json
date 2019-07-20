@@ -8,7 +8,9 @@
     "npm": ">=5.0.0"
   },
   "dependencies": {
+    "@nuxtjs/pwa": "^3.0.0-beta.16",
     "@nuxtjs/style-resources": "^0.1.2",
+    "@nuxtjs/workbox": "^3.0.0-beta.16",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.7.1",
     "nuxt-i18n": "^5.8.5",

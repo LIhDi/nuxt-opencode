@@ -17,47 +17,11 @@ module.exports = {
   },
   head: {
     title: 'OpenCode',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' },
-      { name: 'msapplication-TileColor', content: '#ffffff' },
-      { name: 'msapplication-TileImage', content: '/oc.png' },
-      { name: 'theme-color', content: '#c1c1c1' },
-      { name: 'robots', content: 'index, follow' },
-      { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:site', content: '@marinaaisa' },
-      { property: 'og:type', content: 'profile' },
-      { property: 'og:updated_time', content: builtAt }
-    ],
-    link: [
-      { rel: 'stylesheet', href:'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'},
-      { rel: 'icon', type: 'image/png', href: '/oc.png', sizes: '16x16' },
-      { rel: 'icon', type: 'image/png', href: '/oc.png', sizes: '32x32' },
-      { rel: 'icon', type: 'image/png', href: '/oc.png', sizes: '96x96' },
-      { rel: 'icon', type: 'image/png', href: '/oc.png', sizes: '192x192' },
-      { rel: 'apple-touch-icon', href: '/oc.png', sizes: '57x57' },
-      { rel: 'apple-touch-icon', href: '/oc.png', sizes: '60x60' },
-      { rel: 'apple-touch-icon', href: '/oc.png', sizes: '72x72' },
-      { rel: 'apple-touch-icon', href: '/favicons/apple-touch-icon-76x76.png', sizes: '76x76' },
-      { rel: 'apple-touch-icon', href: '/favicons/apple-touch-icon-114x114.png', sizes: '114x114' },
-      { rel: 'apple-touch-icon', href: '/favicons/apple-touch-icon-120x120.png', sizes: '120x120' },
-      { rel: 'apple-touch-icon', href: '/favicons/apple-touch-icon-144x144.png', sizes: '144x144' },
-      { rel: 'apple-touch-icon', href: '/favicons/apple-touch-icon-152x152.png', sizes: '152x152' },
-      { rel: 'apple-touch-icon', href: '/favicons/apple-touch-icon-180x180.png', sizes: '180x180' },
-      { rel: 'mask-icon', type: 'image/png', href: '/favicons/safari-pinned-tab.svg', color: '#c1c1c1' },
-      { rel: 'manifest', href: '/manifest.json' }
-    ]
   },
-  /*
-  ** Customize the progress-bar color
-  */
-  loading: {
-    color: '#5a46ff',
-    height: '3px'
-  },
-  /*
-  ** Build configuration
-  */
+  meta: [
+    { charset: 'utf-8' },
+  ],
+  loading: { color: '#E91E63' },
   css: [
     '@/assets/css/app.styl',
     'normalize.css/normalize.css',
@@ -98,12 +62,35 @@ module.exports = {
       });
     }
   },
-  plugins: ['~/plugins/lazyload', '~plugins/vuetify.js', '~/plugins/globalComponents', { src: '~plugins/ga.js', ssr: false }],
-  modules: [  
+  plugins: ['~/plugins/lazyload', '~plugins/vuetify.js', '~/plugins/globalComponents', { src: '~plugins/ga.js', ssr: false },{ src: '~/plugins/sw.js',ssr: false }],
+  modules: [
+    '@nuxtjs/workbox',
+    '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
     ['nuxt-i18n', I18N],
     'nuxt-webfontloader'
   ],
+  manifest: {
+    name: 'OpenCode',
+    short_name: 'OpenCode',
+    display: 'standalone',
+    theme_color: '#E91E63',
+    background_color: '#E91E63',
+    lang: 'pt-br'
+  },
+  workbox: {
+    importScripts: [
+        'custom-sw.js'
+    ],
+    runtimeCaching: [
+        {
+            urlPattern: 'https://fonts.googleapis.com/.*',
+            handler: 'cacheFirst',
+            method: 'GET',
+            strategyOptions: {cacheableResponse: {statuses: [0, 200]}}
+        }
+    ]
+  },
 
   styleResources: {
     scss: [

@@ -1,25 +1,23 @@
 <template>
   <div>
     <v-toolbar class="menubar" height="45" card tabs>
-      <v-flex class="hidden-xs-only" sm10 md10>
-        <v-layout align-center justify-space-around>
-        <v-flex  xs12 sm12 md12>
+      <v-layout row wrap>
+      <v-flex class="hidden-xs-only" sm8 md10>
           <v-btn @mouseover="showByIndex = true" @mouseout="showByIndex = null" v-for="item in menuItems" :to="item.url" :key="item.title" flat class="caption white--text">
             {{item.title}}
           </v-btn>
-        </v-flex>
-        </v-layout>
       </v-flex>
-      <v-flex class="hidden-xs-only" sm2 md2>
+      <v-flex class="show-md-and-up" sm4 md2>
         <v-btn icon small outline class="transparent white--text"><v-icon>mdi-facebook</v-icon></v-btn>
         <v-btn icon small outline class="ml-0 transparent white--text"><v-icon>mdi-instagram</v-icon></v-btn>
         <v-btn icon small outline class="ml-0 transparent white--text"><v-icon>mdi-github-circle</v-icon></v-btn>
-        <LangSwitcher/>
+        <!--<LangSwitcher/>-->
       </v-flex>
       <v-tabs class="hidden-sm-and-up" color="transparent">
         <v-toolbar-side-icon @click.stop="toggleDrawer" class="transparent white--text" outline flat></v-toolbar-side-icon>
         <v-tab class="white--text font-weight-bold body-2">HOME </v-tab>
       </v-tabs>
+      </v-layout>
     </v-toolbar>
     <v-navigation-drawer class="pink hidden-sm-and-up" width="450" v-model="drawer.open" app >
       <v-container fluid>
