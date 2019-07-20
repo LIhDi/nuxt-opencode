@@ -13,11 +13,6 @@ export default {
 }
 </script>
 <style lang="scss" >
-.layout {
-  //sdisplay: flex;
-  //flex-direction: column;
-  //min-height: 100vh;
-}
 .nuxt-content {
   background: white;
   flex-grow: 1;

@@ -1,7 +1,6 @@
 <template>
-  <div 
-  >
-              <BlogSection :blogs="blogs"/>
+  <div >
+    <BlogSection :blogs="blogs"/>
   </div>
 </template>
 

@@ -7,13 +7,13 @@
             {{item.title}}
           </v-btn>
       </v-flex>
-      <v-flex class="hidden-sm-and-up" xs6>
-        <v-tabs color="transparent">
+      <v-flex class="hidden-sm-and-up" xs8>
           <v-toolbar-side-icon @click.stop="toggleDrawer" class="transparent white--text" outline flat></v-toolbar-side-icon>
-          <v-tab class="white--text font-weight-bold body-2">Home </v-tab>
-        </v-tabs>
+          <v-btn @mouseover="showByIndex = true" @mouseout="showByIndex = null" to="/"  flat class="caption white--text">
+              Home
+          </v-btn>
       </v-flex>
-      <v-flex xs6 sm4 md2>
+      <v-flex xs4 sm4 md2>
         <v-btn icon small outline class="transparent white--text"><v-icon>mdi-facebook</v-icon></v-btn>
         <v-btn icon small outline class="ml-0 transparent white--text"><v-icon>mdi-instagram</v-icon></v-btn>
         <v-btn icon small outline class="ml-0 transparent white--text"><v-icon>mdi-github-circle</v-icon></v-btn>
