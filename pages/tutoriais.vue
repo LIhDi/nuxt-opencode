@@ -42,7 +42,7 @@ export default {
   data () {
     return {
       ListTutoriais,
-      mostrarLista: true
+      mostrarLista: false
     }
   },
   methods: {
