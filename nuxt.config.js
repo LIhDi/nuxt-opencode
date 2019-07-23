@@ -17,10 +17,27 @@ module.exports = {
   },
   head: {
     title: 'OpenCode',
+    meta: [
+      { charset: 'utf-8' }
+    ],
+    link: [
+      { rel: 'stylesheet', href:'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'},
+      { rel: 'icon', type: 'image/png', href: '/oc.png', sizes: '16x16' },
+      { rel: 'icon', type: 'image/png', href: '/oc.png', sizes: '32x32' },
+      { rel: 'icon', type: 'image/png', href: '/oc.png', sizes: '96x96' },
+      { rel: 'icon', type: 'image/png', href: '/oc.png', sizes: '192x192' },
+      { rel: 'apple-touch-icon', href: '/oc.png', sizes: '57x57' },
+      { rel: 'apple-touch-icon', href: '/oc.png', sizes: '60x60' },
+      { rel: 'apple-touch-icon', href: '/oc.png', sizes: '72x72' },
+      { rel: 'apple-touch-icon', href: '/favicons/apple-touch-icon-76x76.png', sizes: '76x76' },
+      { rel: 'apple-touch-icon', href: '/favicons/apple-touch-icon-114x114.png', sizes: '114x114' },
+      { rel: 'apple-touch-icon', href: '/favicons/apple-touch-icon-120x120.png', sizes: '120x120' },
+      { rel: 'apple-touch-icon', href: '/favicons/apple-touch-icon-144x144.png', sizes: '144x144' },
+      { rel: 'apple-touch-icon', href: '/favicons/apple-touch-icon-152x152.png', sizes: '152x152' },
+      { rel: 'apple-touch-icon', href: '/favicons/apple-touch-icon-180x180.png', sizes: '180x180' },
+      { rel: 'mask-icon', type: 'image/png', href: '/favicons/safari-pinned-tab.svg', color: '#c1c1c1' }
+    ]
   },
-  meta: [
-    { charset: 'utf-8' },
-  ],
   loading: { color: '#E91E63' },
   css: [
     '@/assets/css/app.styl',
@@ -72,6 +89,7 @@ module.exports = {
   ],
   manifest: {
     name: 'OpenCode',
+    description: 'teste',
     short_name: 'OpenCode',
     display: 'standalone',
     theme_color: '#E91E63',
