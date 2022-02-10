@@ -27,7 +27,7 @@
     "@mdi/font": "^3.6.95",
     "frontmatter-markdown-loader": "^1.6.0",
     "highlight.js": "^9.15.6",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "responsive-loader": "^1.2.0",
     "sass-loader": "^7.1.0",
     "sharp": "^0.22.0",
