@@ -12,7 +12,7 @@
     "@nuxtjs/style-resources": "^0.1.2",
     "@nuxtjs/workbox": "^3.0.0-beta.16",
     "normalize.css": "^8.0.1",
-    "nuxt": "^2.7.1",
+    "nuxt": "^3.0.0",
     "nuxt-i18n": "^5.8.5",
     "nuxt-webfontloader": "^1.0.0",
     "vue-lazyload": "^1.2.6",
@@ -25,13 +25,13 @@
   },
   "devDependencies": {
     "@mdi/font": "^3.6.95",
-    "frontmatter-markdown-loader": "^1.6.0",
+    "frontmatter-markdown-loader": "^3.7.0",
     "highlight.js": "^9.15.6",
     "node-sass": "^4.11.0",
-    "responsive-loader": "^1.2.0",
-    "sass-loader": "^7.1.0",
+    "responsive-loader": "^3.1.2",
+    "sass-loader": "^13.2.0",
     "sharp": "^0.22.0",
     "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2"
+    "stylus-loader": "^7.1.0"
   }
 }
